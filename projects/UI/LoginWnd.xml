@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,400" mininfo="500,400" maxinfo="500,400" roundcorner="5,5">
+    <VerticalLayout name="main_layout" width="800" height="600" bkimage="login_bg.jpg" maxheight="400" maxwidth="500" minwidth="500" minheight="400">
+        <HorizontalLayout name="name_layout" width="500" height="100" padding="0,60,0,0">
+            <Label name="name_label" text="账户" width="60" height="30" padding="100,40,0,0" textpadding="0,10,0,0" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Edit name="name_edit" width="200" height="30" padding="0,40,0,0" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout name="pwd_layout" width="500" height="100">
+            <Label name="pwd_label" text="密码" width="60" height="30" padding="100,40,0,0" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Edit name="pwd_edit" width="200" height="30" padding="0,40,0,0" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        </HorizontalLayout>
+        <HorizontalLayout name="btn_layout" width="500" height="100">
+            <Button name="reg_btn" text="注册" float="true" pos="115,41,0,0" width="60" height="30" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="login_btn" text="登录" float="true" pos="270,40,0,0" width="60" height="30" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

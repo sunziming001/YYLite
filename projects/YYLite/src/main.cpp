@@ -7,7 +7,8 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR
 	/*lpCmdLine*/, int nCmdShow)
 {
 	CPaintManagerUI::SetInstance(hInstance);
-	CPaintManagerUI::SetResourcePath(CPaintManagerUI::GetInstancePath());
+	CPaintManagerUI::SetResourcePath(CPaintManagerUI::GetInstancePath()+_T("/UI/"));
+
 	CFrameWindowWnd* pFrame = new CFrameWindowWnd();
 	if (pFrame == NULL) return 0;
 	pFrame->Create(NULL, _T("≤‚ ‘"), UI_WNDSTYLE_FRAME, WS_EX_WINDOWEDGE);

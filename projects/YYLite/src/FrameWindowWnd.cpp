@@ -1,5 +1,5 @@
 #include "FrameWindowWnd.h"
-
+#include "UIlib.h"
 
 
 CFrameWindowWnd::CFrameWindowWnd()
@@ -34,10 +34,14 @@ LRESULT CFrameWindowWnd::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	if (uMsg == WM_CREATE) {
 		m_pm.Init(m_hWnd);
-		CControlUI* pButton = new CButtonUI;
+		/*CControlUI* pButton = new CButtonUI;
 		pButton->SetName(_T("closebtn"));
 		pButton->SetBkColor(0xFFFF0000);
-		m_pm.AttachDialog(pButton);
+		m_pm.AttachDialog(pButton);*/
+		CDialogBuilder builder;
+		CControlUI* pRoot = builder.Create(_T("LoginWnd.xml"), NULL, NULL, &m_pm);
+		ASSERT(pRoot && "Failed to parse XML");
+		m_pm.AttachDialog(pRoot);
 		m_pm.AddNotifier(this);
 		return 0;
 	}
